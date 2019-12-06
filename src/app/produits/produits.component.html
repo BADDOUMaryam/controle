@@ -1,0 +1,24 @@
+
+<table class="table">
+    <thead>
+        <th>Reference</th>
+        <th>Designation</th>
+        <th>Code Fournisseur</th>
+        <th>Prix Unitaire</th>
+        <th>Quantite</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let p of produits" [ngClass]="{bgcolor1:p.quantite==0}">
+          <td>{{p.reference}}</td>
+          <td>{{p.designation}}</td>
+          <td>{{p.codeFournisseur}}</td>
+          <td>{{p.prixUnitaire}}</td>
+          <td>{{p.quantite}}</td>
+          <td><a [routerLink]="[p.reference]" class="btn btn-sm btn-info">Modifier</a></td>
+          <td><button (click)="remove(p.reference)" class="btn btn-sm btn-info">Supprimer</button></td>
+
+      </tr>
+    </tbody>
+
+</table>

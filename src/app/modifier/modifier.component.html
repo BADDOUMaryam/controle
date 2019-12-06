@@ -1,0 +1,39 @@
+<div class="container">
+        <app-navbar></app-navbar>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-9" style="margin-top: 50px;">
+            
+               <div class="card" >
+                    <div class="card-header">
+                      Modifier Produit
+                    </div>
+                   
+                        
+                        <div class="form-group">
+                              
+                                <input type="text" disabled class="form-control" name="ref" [(ngModel)]="reference"   >
+                              </div>
+                              <div class="form-group">
+                                    
+                                    <input required type="text" class="form-control" name="desig" [(ngModel)]="desig" placeholder="Designation">
+                                  </div>
+                                  <div class="form-group">
+                                        
+                                        <input required type="text" class="form-control" name="code" [(ngModel)]="code" placeholder="Code Fournisseur">
+                                      </div>
+                                      <div class="form-group">
+                                        
+                                            <input required type="number" class="form-control"   min="0" name="prix" [(ngModel)]="prix"  placeholder="Prix Unitaire">
+                                          </div>
+                                          <div class="form-group">
+                                        
+                                                <input required type="number" min="0"  class="form-control" name="qnt"  [(ngModel)]="qnt"   placeholder="Quantite">
+                                              </div>
+                             <button type="button" (click)="modifier()" class="btn btn-sm btn-primary">Modifier</button>                 
+                
+               
+                  </div>
+              
+          </div>
+    </div>
+    
